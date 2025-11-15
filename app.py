@@ -29,7 +29,7 @@ def creating():
     conn.close()
     return "Basketball Table Successfully Created"
 
-@app.route('db_insert')
+@app.route('/db_insert')
 def inserting():
     conn = psycopg2.connect("postgresql://kalecodes_flask_hello_world_user:zJUIuYJGjYiF3UjwZKTtA5ZcKW46WKmn@dpg-d4bt760gjchc73d0ceag-a/kalecodes_flask_hello_world")
     cur = conn.cursor()
@@ -45,7 +45,7 @@ def inserting():
     conn.close()
     return "Basketball Table Successfully Populated"
 
-@app.route('db_select')
+@app.route('/db_select')
 def selecting():
     conn = psycopg2.connect("postgresql://kalecodes_flask_hello_world_user:zJUIuYJGjYiF3UjwZKTtA5ZcKW46WKmn@dpg-d4bt760gjchc73d0ceag-a/kalecodes_flask_hello_world")
     cur = conn.cursor()
